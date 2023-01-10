@@ -1,0 +1,30 @@
+Before we look at how to deal with JSON, let’s take a second to understand what it is (and what it isn’t).
+
+JSON stands for JavaScript Object Notation. It’s a language-independent, text-based format, which is commonly used for transmitting data in web applications. JSON was inspired by the JavaScript Object Literal notation, but there are differences between the two. For example, in JSON keys must be quoted using double quotes, while in object literals this is not the case.
+
+There are two ways data can be stored in JSON:
+
+a collection of name/value pairs (aka a JSON object)
+an ordered list of values (aka a JSON array)
+When receiving data from a web server, the data is always a string, which means that it’s your job to convert it into a data structure you can work with.
+
+
+example 1 
+
+const cats = ['Pete', 'Biggles', 'Jasmine'];
+
+let myFavoriteCats = 'My cats are called ';
+
+for (const cat of cats) {
+  myFavoriteCats += `${cat}, `
+}
+console.log(myFavoriteCats);
+
+example 2 
+
+const res= JSON.parse(xhr.response Text);
+for (const key in res) {
+     if (obj.has own property (key)) {
+        console.log ( `${key}; ${res[key]}` )
+        }
+        }
